@@ -16,6 +16,8 @@
     "url": "https://github.com/StSchrader/generator-meteor/issues"
   },
   "dependencies": {
-    "yeoman-generator": "^0.18.7"
+    "yeoman-generator": "^0.18.7",
+    "chalk": "^0.5.1",
+    "yosay": "^1.0.2"
   }
 }
