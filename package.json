@@ -11,7 +11,7 @@
     "generator-meteor"
   ],
   "author": "Stephan Schrader",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/StSchrader/generator-meteor/issues"
   },
