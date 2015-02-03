@@ -1,0 +1,21 @@
+{
+  "name": "generator-meteor",
+  "version": "0.0.1",
+  "description": "A generator for Yeoman to scaffold your Meteor app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StSchrader/generator-meteor.git"
+  },
+  "keywords": [
+    "yeoman-generator",
+    "generator-meteor"
+  ],
+  "author": "Stephan Schrader",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StSchrader/generator-meteor/issues"
+  },
+  "dependencies": {
+    "yeoman-generator": "^0.18.7"
+  }
+}
