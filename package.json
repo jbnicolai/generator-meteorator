@@ -1,6 +1,6 @@
 {
   "name": "generator-meteorator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A Yeoman generator for your Meteor framework apps",
   "main": "app/index.js",
   "dependencies": {
@@ -9,7 +9,9 @@
     "yosay": "^1.0.2",
     "yo": "^1.3.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": ">=2.1.0" 
+  },
   "scripts": {
     "test": "mocha"
   },
@@ -23,7 +25,6 @@
   },
   "keywords": [
     "yeoman-generator",
-    "generator-meteor",
     "meteor"
   ],
   "author": {
