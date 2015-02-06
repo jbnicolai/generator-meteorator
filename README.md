@@ -1,3 +1,8 @@
 # A Yeoman generator for Meteor framework apps
 
-This generator used to be your starting point when you going to develop an app based on the Meteor framework.
+This generator can be used as an replacement for the meteor-create command. It will create a complete scaffold for an Meteor app.
+
+## Getting started
+	mkdir yourprojectname
+	cd yourprojectname
+	yo meteorator
