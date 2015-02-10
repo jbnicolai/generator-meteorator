@@ -1,0 +1,68 @@
+<body>
+	<section id="container">
+		<div class="page-head"></div>
+		<!-- Placeholder for rendering the template in -->
+		{{> main}}
+	</section>
+</body>
+
+
+<!-- 
+	T E M P L A T E 
+-->
+<template name="main">
+	<div class="section-heading">Yeehaw! Meteor is up!</div>
+	<div class="content">
+		<h2 class="bordered">Next steps</h2>
+		
+		<h3>Manage app packages</h3>
+		<p>
+			Enhance the app by adding packages to it. 
+			First you should know, which packages are installed already. To do so, open a terminal and type:
+<pre>
+meteor list
+</pre>
+
+		Available packages listet on <a href="https://atmospherejs.com" target="_blank">atmospherejs.com</a>. To add a package to your app, type:
+<pre>
+meteor add &lt;package_name&gt;
+</pre>
+		</p>
+		<p>To remove packages from your app use the terminal again:
+<pre>
+meteor remove &lt;package_name&gt;
+</pre>
+		</p>
+		
+		<h3>Install an example app</h3>
+		<p>
+			To learn about best practices and common patterns, an example app is always a good starting point.
+<pre>
+meteor create --example todos
+</pre>
+		</p>
+
+		<h2 class="bordered">Documentation</h2>
+		<p>
+			The latest official documentation can be found here:<br>
+			<a href="http://docs.meteor.com/#/full/" target="_blank">http://docs.meteor.com/#/full/</a>
+		</p>
+
+
+		<h2 class="bordered">Related Links</h2>
+		{{#if getLinks}}
+		<ul>
+		{{#each getLinks}}
+			<li class="contact"><strong>{{title}}</strong>,<br>{{desc}}<br>
+			<a href="{{link}}" target="_blank">{{link}}</a></li>
+		{{/each}}
+		</ul>
+		{{/if}}
+	</div>
+	
+	{{#unless connected}}
+	<div class="conn-lost">
+		<p>Connection seems to be lost!</p>
+	</div>
+	{{/unless}}
+</template>
