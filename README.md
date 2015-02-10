@@ -33,4 +33,3 @@ Meteorator will now create all needed files and directories for you. When all we
 Now you have to type simply:
 
 	meteor
-
