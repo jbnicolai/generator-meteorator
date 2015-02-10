@@ -17,13 +17,24 @@
 		
 		<h3>Manage app packages</h3>
 		<p>
-			Enhance the app by adding packages to it. 
-			First you should know, which packages are installed already. To do so, open a terminal and type:
+			Packages save you a lot of work. Adding one or more packages to your meteor app increases the possibilities of rapid prototyping and functionality dramatically. But first things first: you should know, which packages are installed already. To do so, open a terminal and type:
 <pre>
 meteor list
 </pre>
-
-		Available packages listet on <a href="https://atmospherejs.com" target="_blank">atmospherejs.com</a>. To add a package to your app, type:
+			Meteor will show you a list of all installed packages. Now you&apos;re able to add some new to your project. The most common packages are:
+		</p>
+		<ul class="packages-list">
+			<li><strong>bootstrap</strong><br>
+			Twitter Bootstrap Framework</li>
+			<li><strong>iron:router</strong><br>
+			A router for your single page app</li>
+			<li><strong>less</strong><br>
+			LESS pre-processor</li>
+			<li><strong>coffeescript</strong><br>
+			Support for CoffeeScript</li>
+		</ul>
+		<p> 
+			All available packages listet on <a href="https://atmospherejs.com" target="_blank">atmospherejs.com</a>. To add a package to your app, type:
 <pre>
 meteor add &lt;package_name&gt;
 </pre>
@@ -51,7 +62,7 @@ meteor create --example todos
 
 		<h2 class="bordered">Related Links</h2>
 		{{#if getLinks}}
-		<ul>
+		<ul class="link-collection">
 		{{#each getLinks}}
 			<li class="contact"><strong>{{title}}</strong>,<br>{{desc}}<br>
 			<a href="{{link}}" target="_blank">{{link}}</a></li>

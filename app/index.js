@@ -8,11 +8,11 @@ var util = require('util'),
 	chalk = require('chalk'),
 	yosay = require('yosay'),
 	yeoman = require('yeoman-generator'),
-	/*pkgs = [
+	pkgs = [
 		'meteor-platform',
 		'autopublish',
 		'insecure'
-	],*/
+	],
 
 Generator = module.exports = function Generator(args, opts) {
 
@@ -109,7 +109,7 @@ Generator.prototype.writing = function writing() {
 	this.copy('client/templates/main.html', 'client/templates/main.html');
 	//var style_suffix = (this.less) ? '.less' : '.css';
 	//this.copy('client/stylesheets/main'+style_suffix, 'client/stylesheets/main'+style_suffix);
-	this.copy('client/templates/main.css', 'client/templates/main.css');
+	this.copy('client/stylesheets/main.css', 'client/stylesheets/main.css');
 	this.copy('lib/collections.js', 'lib/collections.js');
 	this.copy('public/robots.txt', 'public/robots.txt');
 	this.copy('server/bootstrap.js', 'server/bootstrap.js');
@@ -138,9 +138,9 @@ Generator.prototype.writing = function writing() {
 /**
  *	Writing packages to file, clean up and bye
  */
-/*Generator.prototype.done = function done() {
+Generator.prototype.done = function done() {
 	this.write('.meteor/packages', pkgs.join('\n'));
-};*/
+};
 
 
 Generator.prototype.end = function end() {

@@ -17,7 +17,7 @@ body {
 
 #container {
 	max-width: 964px;
-	margin:15px auto;
+	margin:15px auto 30px auto;
 	background-color: #fafafa;
 	min-height: 100%;
 }
@@ -29,11 +29,21 @@ body {
 	padding: 15px 30px;
 }
 
-#container .content ul {
+#container .content ul.packages-list {
+	margin-left: 30px;
+	margin-bottom: 15px;
+}
+
+#container .content ul.packages-list li {
+	line-height: 1.4;
+	padding: 5px 0;
+}
+
+#container .content ul.link-collection {
 	list-style-type: none;
 }
 
-#container .content ul li {
+#container .content ul.link-collection li {
 	line-height: 1.4;
 	padding: 10px 0;
 }
