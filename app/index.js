@@ -44,42 +44,34 @@ Generator.prototype.welcome = function welcome() {
 /**
  *	Ask for a couple of things
  */
-/*Generator.prototype.prompting = function prompting() {
+Generator.prototype.prompting = function prompting() {
 	var done = this.async(),
 	prompts = [{
 		type: 'confirm',
-		name: 'coffee',
-		message: 'Do you like to code in CoffeeScript?',
-		default: false				
-	},
-	{
-		type: 'confirm',
-		name: 'jquery',
-		message: 'Shall we bundle jQuery with your project?',
+		name: 'LESS',
+		message: 'Would you like using LESS?',
 		default: true
-	},
-	{
+	}, {
 		type: 'confirm',
-		name: 'bootstrap',
-		message: 'And what about Bootstrap with LESS?',
+		name: 'Bootstrap',
+		message: 'Shall we use Bootstrap?',
 		default: false
-	},{
+	}, {
 		type: 'confirm',
-		name: 'less',
-		message: 'LESS only?',
-		default: true
+		name: 'IronRouter',
+		message: 'Would you like to add the iron:router package?',
+		default: false
 	}];
 	this.prompt(prompts, function (answers) {
-		this.coffee = answers.coffee;
-		this.jquery = answers.jquery;
-		this.bootstrap = answers.bootstrap;
-		this.less = answers.less;
+		this.useLess = answers.LESS;
+		this.useBootstrap = answers.Bootstrap;
+		this.useIron = answers.IronRouter;
 		done();
 	}.bind(this));
-};*/
+};
 
 /**
- *	Start scaffolding
+ *	Start scaffolding the app
  */
 Generator.prototype.writing = function writing() {
 	
@@ -107,9 +99,8 @@ Generator.prototype.writing = function writing() {
 	this.copy('client/head.html', 'client/head.html');
 	this.copy('client/templates/main.js', 'client/templates/main.js');
 	this.copy('client/templates/main.html', 'client/templates/main.html');
-	//var style_suffix = (this.less) ? '.less' : '.css';
-	//this.copy('client/stylesheets/main'+style_suffix, 'client/stylesheets/main'+style_suffix);
-	this.copy('client/stylesheets/main.css', 'client/stylesheets/main.css');
+	var style_suffix = (this.useLess) ? '.less' : '.css';
+	this.copy('client/stylesheets/main'+style_suffix, 'client/stylesheets/main'+style_suffix);
 	this.copy('lib/collections.js', 'lib/collections.js');
 	this.copy('public/robots.txt', 'public/robots.txt');
 	this.copy('server/bootstrap.js', 'server/bootstrap.js');
@@ -119,21 +110,19 @@ Generator.prototype.writing = function writing() {
 /**
  *	Adding choosen packages
  */
- /*Generator.prototype.pkgAdd = function pkgAdd() {
- 	if ( this.coffee ) {
- 		pkgs.push('coffeescript');
- 	}
- 	if ( this.jquery ) {
- 		pkgs.push('jquery');
- 	}
- 	if ( this.bootstrap ) {
+ Generator.prototype.pkgAdd = function pkgAdd() {
+ 	if ( this.useBootstrap ) {
  		pkgs.push('bootstrap');
+ 		pkgs.push('jquery');
  		pkgs.push('less');
  	}
- 	if ( this.less && pkgs.indexOf('less') == -1 ) {
+ 	if ( this.useLess && pkgs.indexOf('less') == -1 ) {
  		pkgs.push('less');
  	}
- };*/
+ 	if ( this.useIron ) {
+ 		pkgs.push('iron:router');
+ 	}
+ };
 
 /**
  *	Writing packages to file, clean up and bye

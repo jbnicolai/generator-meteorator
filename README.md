@@ -28,8 +28,10 @@ To get up and running, open a terminal an type the following:
     cd yourprojectname
     yo meteorator
 
-Meteorator will now create all needed files and directories for you. When all went well, the generator ends up with a messages of success.
+Meteorator will now create all needed files and directories for you. When all went well, the generator ends up with a message of success.
 
-Now you have to type simply:
+Now you simply have to type:
 
 	meteor
+
+to start.
