@@ -19,9 +19,31 @@ body {
 
 #container {
 	max-width: @def-page-width;
-	margin:0 auto -80px auto;
+	margin:15px auto;
 	background-color: #fafafa;
 	min-height: 100%;
+	
+	nav {
+		min-height: 48px;
+		padding: 0 30px;
+		border-bottom: 1px solid #cfcfcf;
+		margin-bottom: 30px;
+		ul {
+			list-style-type: none;
+			li {
+				display: inline-block;
+				a {
+					display:block;
+					text-decoration: none;
+					padding: 16px 15px;
+					&:active,
+					&:hover {
+						background-color: #eaeaea;
+					}
+				}
+			}
+		}
+	}
 	
 	.section-heading {
 		background-color: #44DD44;

@@ -97,9 +97,20 @@ Generator.prototype.writing = function writing() {
 	this.copy('.meteor/.gitignore', '.meteor/.gitignore');
 	this.copy('.meteor/release', '.meteor/release');
 	this.copy('client/head.html', 'client/head.html');
-	this.copy('client/templates/main.js', 'client/templates/main.js');
-	this.copy('client/templates/main.html', 'client/templates/main.html');
-	var style_suffix = (this.useLess) ? '.less' : '.css';
+	
+	if ( this.useIron ) {
+		this.copy('lib/router.js', 'lib/router.js');
+		this.copy('client/templates/app-body.html', 'client/templates/app-body.html');
+		this.copy('client/templates/app-body.js', 'client/templates/app-body.js');
+		this.copy('client/templates/home.html', 'client/templates/home.html');
+		this.copy('client/templates/info.html', 'client/templates/info.html');
+		this.copy('client/templates/info.js', 'client/templates/info.js');
+	} else {
+		this.copy('client/templates/main.js', 'client/templates/main.js');
+		this.copy('client/templates/main.html', 'client/templates/main.html');
+	}
+
+	var style_suffix = (this.useLess  || this.useBootstrap) ? '.less' : '.css';
 	this.copy('client/stylesheets/main'+style_suffix, 'client/stylesheets/main'+style_suffix);
 	this.copy('lib/collections.js', 'lib/collections.js');
 	this.copy('public/robots.txt', 'public/robots.txt');
