@@ -9,6 +9,7 @@ Meteor runs on Linux or Mac OS, Windows is not fully supported yet.
 To use the generator you must have the following software installed on your machine:
 
 * Node.js
+* npm
 * Yeoman
 * Meteor
 * generator-meteorator
@@ -17,7 +18,9 @@ To use the generator you must have the following software installed on your mach
 
 Open a terminal and type:
 
-	npm install -g generator-meteorator
+	git clone https://github.com/StSchrader/generator-meteorator.git
+	cd generator-meteorator
+	npm link
 
 
 ## Getting started
