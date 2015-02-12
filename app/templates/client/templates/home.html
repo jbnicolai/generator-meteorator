@@ -1,22 +1,11 @@
-<body>
-	<section id="container">
-		<section class="spacer"></section>
-		<div class="page-head"></div>
-		{{> main}}
-	</section>
-	<footer>
-		<span>Generated with Yeoman and <a href="https://github.com/StSchrader/generator-meteorator">Meteorator</a>.</span>
-	</footer>
-</body>
-
-
-<template name="main">
-	<div class="section-heading">Yeehaw!</div>
-	<div class="content">
+<template name="Home">
+	<section class="content">
 		<h2 class="bordered">Your Meteor app is running.</h2>
 		<p>
+            Meteor runs with the Iron.Router package, so you can see a small menu on top of the page.<br>            
             Now it&apos;s time for going creative and developing the next killer app.
         </p>
+        <p>Happy coding!</p>   
 
 		<h2 class="bordered">Documentation</h2>
 		<p>
@@ -26,19 +15,13 @@
 
 
 		<h2 class="bordered">Related Links</h2>
-		{{#if getLinks}}
+		{{#if data}}
 		<ul class="link-collection">
-		{{#each getLinks}}
+		{{#each data}}
 			<li class="contact"><strong>{{title}}</strong>,<br>{{desc}}<br>
 			<a href="{{link}}" target="_blank">{{link}}</a></li>
 		{{/each}}
 		</ul>
 		{{/if}}
-	</div>
-	
-	{{#unless connected}}
-	<div class="conn-lost">
-		<p>Connection seems to be lost!</p>
-	</div>
-	{{/unless}}
+	</section>
 </template>

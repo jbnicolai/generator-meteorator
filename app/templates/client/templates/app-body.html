@@ -1,0 +1,22 @@
+<template name="appBody">
+	<div id="container">
+		
+		<section class="spacer"></section>
+		
+		<nav role="navigation">
+			<ul id="nav">
+				<li class="active"><a href="/">Home</a></li>
+				<li><a href="/info">Info</a></li>
+			</ul>
+		</nav>
+
+		<div class=".content">
+			{{#each thisArray}}
+				{{> yield}}
+			{{/each}}
+		</div>
+	</div>
+
+		{{> Footer}}
+
+</template>
