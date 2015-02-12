@@ -16,6 +16,16 @@ To use the generator you must have the following software installed on your mach
 
 ## Install the generator
 
+There are two ways to get the generator installed:
+
+### via npm
+
+Open a terminal and type:
+
+	npm install generator-meteorator -g
+
+### via GitHub
+
 Open a terminal and type:
 
 	git clone https://github.com/StSchrader/generator-meteorator.git
