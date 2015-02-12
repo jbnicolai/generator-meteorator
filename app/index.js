@@ -94,7 +94,6 @@ Generator.prototype.writing = function writing() {
 	// Copy the template files in their respective directories 
 	//
 
-	this.copy('.meteor/.gitignore', '.meteor/.gitignore');
 	this.copy('.meteor/release', '.meteor/release');
 	this.copy('client/head.html', 'client/head.html');
 	if ( this.useIron ) {
@@ -139,6 +138,7 @@ Generator.prototype.writing = function writing() {
  */
 Generator.prototype.done = function done() {
 	this.write('.meteor/packages', pkgs.join('\n'));
+	this.write('.meteor/.gitignore', 'local');
 };
 
 
